@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FinFlow - Login</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Manrope:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#cabeff",
+                        "primary-fixed-dim": "#28dfb5",
+                        "on-surface-variant": "#bacac2",
+                        "on-secondary-fixed-variant": "#4918c8",
+                        "surface-tint": "#28dfb5",
+                        "on-tertiary-fixed-variant": "#6c3a00",
+                        "surface-container-lowest": "#08100d",
+                        "on-tertiary-container": "#733e00",
+                        "on-tertiary-fixed": "#2e1500",
+                        "on-primary": "#00382b",
+                        "surface-bright": "#333b37",
+                        "secondary-fixed": "#e6deff",
+                        "surface-dim": "#0d1512",
+                        "surface-container-high": "#242c28",
+                        "inverse-on-surface": "#2a322f",
+                        "surface-container": "#19211e",
+                        "surface": "#0d1512",
+                        "surface-container-low": "#161d1a",
+                        "primary-fixed": "#55fcd0",
+                        "on-surface": "#dce4df",
+                        "on-primary-fixed-variant": "#00513f",
+                        "primary": "#46f1c5",
+                        "on-primary-fixed": "#002118",
+                        "surface-variant": "#2f3633",
+                        "outline-variant": "#3b4a44",
+                        "on-tertiary": "#4c2700",
+                        "primary-container": "#00d4aa",
+                        "on-error-container": "#ffdad6",
+                        "inverse-surface": "#dce4df",
+                        "error-container": "#93000a",
+                        "on-error": "#690005",
+                        "secondary-container": "#4918c8",
+                        "outline": "#85948d",
+                        "background": "#0d1512",
+                        "surface-container-highest": "#2f3633",
+                        "secondary": "#cabeff",
+                        "tertiary": "#ffcea6",
+                        "on-secondary-container": "#b9aaff",
+                        "error": "#ffb4ab",
+                        "on-background": "#dce4df",
+                        "inverse-primary": "#006b55",
+                        "on-secondary-fixed": "#1c0062",
+                        "on-primary-container": "#005643",
+                        "tertiary-fixed": "#ffdcc1",
+                        "tertiary-container": "#ffa858",
+                        "tertiary-fixed-dim": "#ffb77a",
+                        "on-secondary": "#32009a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "8px",
+                        "md": "16px",
+                        "xs": "4px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "lg": "24px",
+                        "container-max": "1200px",
+                        "xl": "40px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter", "sans-serif"],
+                        "display-lg": ["Manrope", "sans-serif"],
+                        "body-lg": ["Inter", "sans-serif"],
+                        "h1": ["Manrope", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-md": ["Manrope", "sans-serif"],
+                        "h2": ["Manrope", "sans-serif"],
+                        "label-md": ["Inter", "sans-serif"],
+                        "mono-label": ["Inter", "monospace"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "h1": ["30px", { "lineHeight": "38px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400" }],
+                        "display-md": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "h2": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "mono-label": ["13px", { "lineHeight": "18px", "letterSpacing": "-0.01em", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-fixed">
+<!-- Hero Area (Top 35%) -->
+<div class="h-[309px] relative flex flex-col items-center justify-center overflow-hidden shrink-0 border-b border-white/5">
+<!-- Minimal Gradient Mesh Background -->
+<div class="absolute inset-0 bg-surface"></div>
+<div class="absolute top-[-20%] left-[-10%] w-[70%] h-[70%] rounded-full bg-primary-container blur-[100px] opacity-15"></div>
+<div class="absolute bottom-[-10%] right-[-20%] w-[60%] h-[60%] rounded-full bg-secondary-container blur-[120px] opacity-20"></div>
+<!-- Content -->
+<div class="relative z-10 flex flex-col items-center text-center px-lg w-full max-w-[400px]">
+<div class="flex items-center gap-xs mb-sm">
+<span class="material-symbols-outlined text-primary-container text-[32px]" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<span class="font-display-md text-display-md tracking-tighter text-on-background">FinFlow</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[280px]">Precision tooling for modern wealth management.</p>
+</div>
+</div>
+<!-- Form Area -->
+<div class="flex-1 flex flex-col px-lg pt-xl pb-lg sm:max-w-[440px] sm:mx-auto sm:w-full">
+<div class="mb-lg text-center sm:text-left">
+<h1 class="font-h1 text-h1 text-on-background">Welcome back</h1>
+</div>
+<form class="flex flex-col gap-md">
+<!-- Email Input -->
+<div class="flex flex-col gap-xs">
+<label class="sr-only" for="email">Email</label>
+<div class="relative flex items-center group">
+<span class="material-symbols-outlined absolute left-md text-on-surface-variant group-focus-within:text-primary-container transition-colors" style="font-variation-settings: 'FILL' 0;">mail</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg py-md pl-[48px] pr-md font-body-md text-body-md text-on-background placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:shadow-[0_0_15px_rgba(0,212,170,0.15)] transition-all" id="email" placeholder="Email address" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="flex flex-col gap-xs">
+<label class="sr-only" for="password">Password</label>
+<div class="relative flex items-center group">
+<span class="material-symbols-outlined absolute left-md text-on-surface-variant group-focus-within:text-primary-container transition-colors" style="font-variation-settings: 'FILL' 0;">lock</span>
+<input class="w-full bg-surface-container border border-outline-variant rounded-lg py-md pl-[48px] pr-[48px] font-body-md text-body-md text-on-background placeholder:text-outline focus:outline-none focus:border-primary-container focus:ring-1 focus:ring-primary-container focus:shadow-[0_0_15px_rgba(0,212,170,0.15)] transition-all" id="password" placeholder="Password" type="password"/>
+<button class="absolute right-md text-on-surface-variant hover:text-on-background transition-colors focus:outline-none" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Forgot Password -->
+<div class="flex justify-end mt-xs">
+<a class="font-label-md text-label-md text-primary-container hover:text-primary transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Sign In Button -->
+<button class="mt-sm w-full rounded-full bg-gradient-to-r from-primary-container to-secondary-container py-[14px] px-lg flex items-center justify-center border border-white/20 shadow-[0_4px_20px_rgba(0,212,170,0.15)] hover:shadow-[0_4px_25px_rgba(0,212,170,0.3)] active:scale-[0.98] transition-all relative overflow-hidden group" type="submit">
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<span class="font-label-md text-label-md text-white tracking-widest uppercase relative z-10">Sign In</span>
+</button>
+</form>
+<!-- Divider -->
+<div class="flex items-center gap-md my-xl opacity-60">
+<div class="h-px bg-outline-variant flex-1"></div>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Or</span>
+<div class="h-px bg-outline-variant flex-1"></div>
+</div>
+<!-- Social Login -->
+<div class="flex flex-col gap-sm">
+<button class="w-full flex items-center justify-center gap-sm rounded-lg border border-outline-variant bg-surface-container py-md hover:bg-surface-container-high transition-colors text-on-background active:scale-[0.99]" type="button">
+<img alt="Google" class="w-5 h-5" data-alt="Minimalist Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEoox4V8S_RioWWwOfY9CBSPNMfZXA81vcIT1aAPOBgczNNr18RZI4MNmFF0KR680Jzxr-KYCzWb4Kfsn-5LeGLOPm9Z1OVduN8g6vWjM_a5P_WojfKp_VHbYgyyNLrTB-AbWBN9JypPGxXxk8ALZ8vAX-wWU5AYzQOItY72PjGayQj0bHVs9_rfm3JkVscEGyWugAhjIuuS5U0Q8WtsAsWBpq4V_M_CSfMaAnu6l2I8LAwz1sxaUPyzO9zR9jpunO4Hvb8w6YU3Ah"/>
+<span class="font-mono-label text-mono-label">Continue with Google</span>
+</button>
+<button class="w-full flex items-center justify-center gap-sm rounded-lg border border-outline-variant bg-surface-container py-md hover:bg-surface-container-high transition-colors text-on-background active:scale-[0.99]" type="button">
+<img alt="Apple" class="w-5 h-5 invert" data-alt="Minimalist solid white Apple logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmvhoQAAVuiMBxfFka6o782Zr8HZYsiGhFIa4sES1iFmSnLw6mTth7Huie7eRkFIkpwuMp7eS_cXlJteqj7icMPJ8b2eUWzhrYr29EaUFbCfuBirbVLycen08rbuTKD9lZzRc_iqcd1I7mZbxR6vUosk11jnKfh2id0VCBtstRsp4aNIuWI4YN8GvcqtPig9MkaRsue2ucB5FVQRHfwqsssuc6p-LRHc4S9JC9-UKS7ZSqc92cTtR_j4RUtS3aKDEQ4mOr1_2yvgGr"/>
+<span class="font-mono-label text-mono-label">Continue with Apple</span>
+</button>
+</div>
+<!-- Sign Up Link -->
+<div class="mt-auto pt-xl text-center">
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Don't have an account? <a class="text-primary-container font-medium hover:text-primary transition-colors hover:underline underline-offset-4" href="#">Sign up</a>
+</p>
+</div>
+</div>
+</body></html>
